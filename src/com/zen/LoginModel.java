@@ -9,7 +9,7 @@ public class LoginModel {
 	public String getType(String login, String paswd) {
 		
 		System.out.println(login + "  " +  paswd); 
-		EntityManagerFactory emf=Persistence.createEntityManagerFactory("CutomerEntity");
+		EntityManagerFactory emf=Persistence.createEntityManagerFactory("custentity");
 		EntityManager em = emf.createEntityManager();
 		
 		CustomerEntity ce = em.find(CustomerEntity.class, login);

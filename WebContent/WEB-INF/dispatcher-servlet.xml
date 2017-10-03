@@ -11,8 +11,12 @@
           http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
 
-    <bean id="loginctrl" class="com.zen.LoginController"></bean>
-    <bean id="urlmpng" class="org.springframwork.web.servelet.handler.SimpleUrlHandlerMapping">
+	<bean id="lmodel" class="com.zen.LoginModel"></bean>
+    <bean id="loginctrl" class="com.zen.LoginController">
+    <property name="lmodel" ref="lmodel"></property>
+    </bean>
+    
+    <bean id="urlmpng" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
         <property name="mappings">
          
          <props>
